@@ -31,8 +31,71 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-
+      <!--Input Group 1-->
+      <div class="input-group1">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">9AM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 2-->
+      <div class="input-group2">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">10AM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 3-->
+      <div class="input-group3">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">11AM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 4-->
+      <div class="input-group4">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">12AM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 5-->
+      <div class="input-group5">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">1PM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 6-->
+      <div class="input-group6">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">2PM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 7-->
+      <div class="input-group7">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">3PM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 8-->
+      <div class="input-group8">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">4PM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
+      <!--Input Group 9-->
+      <div class="input-group9">
+        <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">5PM</span>
+        <input type="text" class="form-control" id="input-1" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" aria-label="Username" aria-describedby="addon-wrapping">Button</button>
+      </div>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -44,26 +107,23 @@
       //Initiate a moment object
       var now = moment();
       var dt = new Date();
-      //console.log(dt.getDay)
+      
       //Set format of date displayed - Day, Month, Date
       var day = now.format('dddd, MMMM do');
       var date = now.format('dddd');
       var time = ["9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM"];
       //Append the date to page
       $("#currentDay").append(day);
-      
-
+      debugger;
       //Check current day for weekday or weekend
       
-      /*if (dt.getDay() == 6 || dt.getDay()==0)
+      if (dt.getDay() == 6 || dt.getDay()==0)
       {
         //TODAY IS WEEKEND
-        var timeblock = $("<div>");
-        var p = $("<p>").text("Today is weekend! Stop working!");
-        $(".container").append(p);  
+        $(".container").text("Today is the weekend! Stop working!");  
       }
       else 
-      {*/
+      {
         //TODAY IS WEEKDAY
         //For loop to iterate through the timeblocks of 9AM - 5PM (9 periodic timeblocks)
         alert("test1")
@@ -83,14 +143,9 @@
           $(".container").append(inputgroup);  
           
           
-          /*<div class="input-group flex-nowrap">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="addon-wrapping">@</span>
-            </div>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-          </div>*/
+        
         }
-      //}
+      }
       
       
       
@@ -101,7 +156,7 @@
     
       
 
-      }) 
+    })
     
     
     </script>
